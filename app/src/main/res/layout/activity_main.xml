@@ -8,12 +8,12 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvInput"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:background="@color/light_grey"
         android:padding="10dp"
         android:textSize="48sp"
-        android:text="@string/calc_text"
         android:gravity="end|bottom"
         />
 
@@ -57,7 +57,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:text="@string/Divide"
             />
 
@@ -102,7 +102,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:text="@string/Multiply"
             />
 
@@ -147,7 +147,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:text="@string/Minus"
             />
 
@@ -160,10 +160,21 @@
         >
         <Button
             android:layout_margin="2dp"
+            android:id="@+id/btnDot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDecimalPoint"
+            android:text="@string/Dot"
+
+
+            />
+        <Button
+            android:layout_margin="2dp"
             android:id="@+id/btnZero"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:onClick="onDigit"
             android:text="@string/_0"
 
@@ -174,7 +185,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onClear"
             android:text="@string/clr"
             />
         <Button
@@ -183,7 +194,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:text="@string/_Plus"
             />
 
@@ -200,7 +211,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:onClick="onDigit"
+            android:onClick="onEqual"
             android:text="@string/Equal"
 
             />
